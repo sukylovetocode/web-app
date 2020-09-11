@@ -11,6 +11,33 @@ const routes = [
     name: 'Home',
     /* component:()=>import() */
     component: Home,
+    children: [
+      {
+        path: '/table2excel',
+        name: 'TableToExcel',
+        component: () => import('../views/pages/TableToExcel.vue'),
+      },
+      {
+        path: '/uploadcontent',
+        name: 'UploadContent',
+        component: () => import('../views/pages/UploadContent.vue'),
+      },
+      {
+        path: '/validateCode',
+        name: 'ValidateCode',
+        component: () => import('../views/pages/validateCode.vue'),
+      },
+      {
+        path: '/user',
+        name: 'User',
+        component: () => import('../views/pages/permission/user.vue'),
+      },
+      {
+        path: '/role',
+        name: 'Role',
+        component: () => import('../views/pages/permission/role.vue'),
+      },
+    ],
   },
   {
     path: '/login',

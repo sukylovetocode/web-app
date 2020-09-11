@@ -2,20 +2,20 @@
 <div class="head_wrap">
     <div class="collapse_btn" @click="handleHideMenu"><i class="el-icon-s-unfold" v-if="isCollapse"></i><i class="el-icon-s-fold" v-else></i></div>
     <el-menu default-active="2" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-        <el-menu-item index="1">处理中心</el-menu-item>
+        <el-menu-item index="1">博客中心</el-menu-item>
         <el-submenu index="2">
-            <template slot="title">我的工作台</template>
+            <template slot="title">购物中心</template>
             <el-menu-item index="2-1">选项1</el-menu-item>
             <el-menu-item index="2-2">选项2</el-menu-item>
             <el-menu-item index="2-3">选项3</el-menu-item>
             <el-submenu index="2-4">
-                <template slot="title">选项4</template>
+                <template slot="title">选项1</template>
                 <el-menu-item index="2-4-1">选项1</el-menu-item>
                 <el-menu-item index="2-4-2">选项2</el-menu-item>
                 <el-menu-item index="2-4-3">选项3</el-menu-item>
             </el-submenu>
         </el-submenu>
-        <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
+        <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">聊天室</a></el-menu-item>
     </el-menu>
     <div class="fullscreen" @click="handleFullscreen">
         <i class="el-icon-full-screen"></i>
@@ -40,11 +40,11 @@ export default {
         };
     },
     mounted() {
-        this.$axios.get('/abc').then((response) => {
-            console.log(response);
-        }).catch((err) => {
-            console.log(err);
-        });
+        // this.$axios.get('/abc').then((response) => {
+        //     console.log(response);
+        // }).catch((err) => {
+        //     console.log(err);
+        // });
     },
     methods: {
         handleSelect($key) {

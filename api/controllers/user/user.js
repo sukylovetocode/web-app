@@ -11,6 +11,12 @@ class UserController{
         let result = await UserModel.find();
         ctx.body = result;
     }
+    async newRole(ctx){
+        console.log(ctx.request.body);
+        ctx.body = {
+            msg: '请求成功',
+        }
+    }
 }
 
 export default new UserController();
