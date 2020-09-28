@@ -29,7 +29,7 @@ export default {
     },
     methods: {
         handleLogin() {
-            this.$router.push('/');
+            this.$router.push('/admin/user');
         },
     },
 };
